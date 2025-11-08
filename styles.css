@@ -33,12 +33,12 @@ inset 0 1px 2px #ffffff70,
 
 @font-face {
     font-family: inter;
-    src: url(Inter/Inter-VariableFont_opsz\,wght.ttf);
+    src: url(Inter-VariableFont_opsz\,wght.ttf);
 }
 
 @font-face {
     font-family: momo;
-    src: url(Momo_Trust_Display/MomoTrustDisplay-Regular.ttf);
+    src: url(MomoTrustDisplay-Regular.ttf);
 }
 
 .body {
