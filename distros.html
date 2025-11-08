@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+     <div class="navbar">
+        <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="adddistro.html"><i class="fa fa-fw fa-plus"></i> Add a Distro</a>
+        <input class="searchbox" id="searchbar" type="search" onkeyup="search1()" placeholder="Search a Distro" onclick="$('distros.html')">        
+        <a href="#" style="float: right;" class="activelogin"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+    <div class="grid" id="distros">
+        <div class="distro">
+            <h1 style="background-color: rgb(168,0,48);">Debian<i class="fa-brands fa-debian"></i></h1>
+            <div class="info">
+                <p1>Latest Version: 13</p1>
+                <p1>Codename: Trixie</p1>
+                <p1>Release Date: 9 Aug 2025</p1>
+            </div>
+            <div class="buttondistro">
+                    <a href="https://www.ubuntu.com">ISO</a>
+                    <a>Website</a>
+            </div>
+            <img src="images/debian-13.png" class="image">
+            <div class="basedondistro">
+                <p1>Based On:</p1>
+                <p1>Debian</p1>
+            </div>
+        </div>
+        <div class="distro">
+            <h1 style="background-color: rgb(11, 87, 164);">Fedora</h1>
+            <div class="info">
+                <p1>Latest Version: 43</p1>
+                <p1>Codename: Forty Three</p1>
+                <p1>Release Date: 28 Oct 2025</p1>
+            </div>
+            <div class="buttondistro">
+                    <a href="https://www.fedoraproject.org/workstation/download">ISO</a>
+                    <a href="https://www.fedoraproject.org/">Website</a>
+            </div>
+            <img src="images/fedora-43.jpg">                
+            <div class="info">
+                <p1>DE: Gnome or KDE</p1>
+                <p1>Based On: Red Hat Linux</p1>
+            </div>
+        </div>
+        <div class="distro">
+            <h1 style="background-color: rgb(255, 4, 4);">Ad<i class="fa-brands fa-debian"></i></h1>
+            <img src="images/mcdonalds-banner-example.png">
+        </div>
+        <div class="distro">
+            <h1 style="background-color: rgb(233, 84, 32);">Ubuntu</h1>
+            <div class="info">
+                <p1>Latest Version: 25.10</p1>
+                <p1>Codename: Questing Quokka</p1>
+                <p1>Release Date: 28 Oct 2025</p1>
+            </div>
+                <div class="buttondistro">
+                    <a href="https://www.ubuntu.com">ISO</a>
+                    <a>Website</a>
+                </div>
+                <div class="basedondistro">
+                <p1>Based On:</p1>
+                <p1>Debian</p1>
+            </div>
+        </div>
+        <div class="distro">
+            <h1 style="background-color: rgb(136, 175, 126);">Linux Mint</h1>
+            <div class="info">
+                <p1>Latest Version: 22</p1>
+                <p1>Codename: Forty Three</p1>
+                <p1>Release Date: 28 Oct 2025</p1>
+            </div>
+                <div class="buttondistro">
+                    <a href="https://www.ubuntu.com">ISO</a>
+                    <a>Website</a>
+                </div>
+                <div class="basedondistro">
+                <p1>Based On:</p1>
+                <p1>Ubuntu (Debian)</p1>
+            </div>
+        </div>
+        <div class="distro">
+            <h1 style="background-color: rgb(255, 65, 54);">Pop!_OS</h1>
+            <div class="info">
+                <p1>Latest Version: 22.04 LTS</p1>
+                <p1>Codename: N/A</p1>
+                <p1>Release Date: 22 Apr 2025</p1>
+            </div>
+                <div class="buttondistro">
+                    <a href="https://pop.system76.com">ISO</a>
+                    <a href="https://pop.system76.com">Website</a>
+                </div>
+                <div class="basedondistro">
+                <p1>Based On:</p1>
+                <p1>Ubuntu (Debian)</p1>
+            </div>
+        </div>
+    </div>
+
+<script>
+function search1() {
+
+    var input = document.getElementById('searchbar');
+    var filter = input.value.toUpperCase();
+
+    var grid = document.getElementById("distros");
+    
+    var distros = grid.getElementsByClassName('distro');
+
+    for (var i = 0; i < distros.length; i++) {
+        var h1 = distros[i].getElementsByTagName('h1')[0];
+        
+        var txtValue = h1.textContent || h1.innerText;
+        
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            distros[i].style.display = "";
+        } else {
+            distros[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
